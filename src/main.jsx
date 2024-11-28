@@ -1,10 +1,9 @@
-import React from 'react';
-import {createRoot} from 'react-dom/client';
-import './index.css';
-import App from './App';
+import React from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App";
 
-
-const rootEl =  document.querySelector('#app');
+const rootEl = document.querySelector("#app");
 const root = createRoot(rootEl);
 
 root.render(
