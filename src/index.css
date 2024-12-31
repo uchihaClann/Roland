@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* Any base styles go here */
+}
+
+@layer components {
+  /* Your component-specific styles, including animations */
+  @keyframes pupil {
+    0% {
+      transform: scale(1.2) translate(0%, -10%);
+    }
+    /* ... rest of your pupil animation */
+  }
+
+  @keyframes eye-lid {
+    0% {
+      background: #000;
+    }
+    /* ... rest of your eye-lid animation */
+  }
+}
+@layer utilities {
+    .sensor-n:hover ~ .btn-button .btn-pupil {
+        transform: translateX(0) translateY(calc(-3 * 20%));
+    }
+    .sensor-ne:hover ~ .btn-button .btn-pupil {
+        transform: translateX(calc(2 * 20%)) translateY(calc(-2 * 20%));
+    }
+    .sensor-e:hover ~ .btn-button .btn-pupil {
+        transform: translateX(calc(3 * 20%)) translateY(0);
+    }
+    .sensor-se:hover ~ .btn-button .btn-pupil {
+        transform: translateX(calc(2 * 20%)) translateY(calc(2 * 20%));
+    }
+    .sensor-s:hover ~ .btn-button .btn-pupil {
+        transform: translateX(0) translateY(calc(3 * 20%));
+    }
+    .sensor-sw:hover ~ .btn-button .btn-pupil {
+        transform: translateX(calc(-2 * 20%)) translateY(calc(2 * 20%));
+    }
+    .sensor-w:hover ~ .btn-button .btn-pupil {
+        transform: translateX(calc(-3 * 20%)) translateY(0);
+    }
+    .sensor-nw:hover ~ .btn-button .btn-pupil {
+        transform: translateX(calc(-2 * 20%)) translateY(calc(-2 * 20%));
+    }
+}
